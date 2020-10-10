@@ -82,6 +82,20 @@ def reto2():
 
 def reto3():
     # 3.Hacer el cálculo para habitación en forma de L
-    pass
 
-reto2()
+    pared_larga = float(input("Introduce la longitud (en metros) de la pared mas larga: "))
+    pared_corta = float(input("Introduce la longitud (en metros) de la pared mas corta: "))
+
+    metros_cuadrados = ((pared_larga*pared_corta)*2) - (pared_corta**2)
+
+    METROXLITRO = 0.05
+
+    total_litros = int(metros_cuadrados * METROXLITRO)
+    TOTAL_BOTES = total_litros / 5
+
+    if int(TOTAL_BOTES) < TOTAL_BOTES:
+        TOTAL_BOTES = int(TOTAL_BOTES) + 1
+
+    print(f"Para pintar {metros_cuadrados} m2 de techo, son necesarios {TOTAL_BOTES} botes de pintura de 5l.")
+
+reto3()
