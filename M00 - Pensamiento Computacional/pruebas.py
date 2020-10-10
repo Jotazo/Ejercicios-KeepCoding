@@ -1,4 +1,7 @@
-num = 2
-num2 = 2.5
+metroxlitro = 0.05
 
-print(num.real())
+metros = int(input("Cuantos metros?"))
+
+total_litros = metros*metroxlitro
+
+print(total_litros)

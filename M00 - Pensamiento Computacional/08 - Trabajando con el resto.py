@@ -113,7 +113,7 @@ def reto3():
 
     total_porciones = personas * porciones
     pizza = 8
-    total_pizzas = ceil((total_porciones / pizza))
+    total_pizzas = ceil(total_porciones / pizza)
 
     print(f"Para {personas} personas, comiendo cada una {porciones} porciones, hay que comprar {total_pizzas} pizzas")
 
