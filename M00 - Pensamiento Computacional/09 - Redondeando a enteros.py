@@ -83,10 +83,16 @@ def reto2():
 def reto3():
     # 3.Hacer el cálculo para habitación en forma de L
 
-    pared_larga = float(input("Introduce la longitud (en metros) de la pared mas larga: "))
-    pared_corta = float(input("Introduce la longitud (en metros) de la pared mas corta: "))
+    pared_larga1 = float(input("Introduce la longitud (en metros) de la pared 1 mas larga: "))
+    pared_corta1 = float(input("Introduce la longitud (en metros) de la pared 1 mas corta: "))
 
-    metros_cuadrados = ((pared_larga*pared_corta)*2) - (pared_corta**2)
+    pared_larga2 = float(input("Introduce la longitud (en metros) de la pared 2 mas larga: "))
+    pared_corta2 = float(input("Introduce la longitud (en metros) de la pared 2 mas corta: "))
+
+    rectangulo1 = pared_larga1*pared_corta1
+    rectangulo2 = pared_larga2*pared_corta2
+    
+    metros_cuadrados = rectangulo1 + rectangulo2
 
     METROXLITRO = 0.05
 
