@@ -42,9 +42,11 @@ def reto1():
         while True:
             try:
                 num = float(input(f"Introduzca el número {i+1}: "))
+                if num in lista_numeros:
+                    raise ValueError
                 break
             except ValueError:
-                print("No ha introducido un valor válido.")
+                print("No ha introducido un valor válido o ha introducido un valor repetido.")
         lista_numeros.append(num)
 
     mayor = max(lista_numeros)
@@ -60,9 +62,11 @@ def reto2():
         while True:
             try:
                 num = float(input(f"Introduzca el número {i+1}: "))
+                if num in lista_numeros:
+                    raise ValueError
                 break
             except ValueError:
-                print("No ha introducido un valor válido.")
+                print("No ha introducido un valor válido o ha introducido un valor repetido.")
         lista_numeros.append(num)
 
     mayor = max(lista_numeros)
@@ -83,9 +87,11 @@ def reto3():
         while True:
             try:
                 num = float(input(f"Introduzca el número {i+1}: "))
+                if num in lista_numeros:
+                    raise ValueError
                 break
             except ValueError:
-                print("No ha introducido un valor válido.")
+                print("No ha introducido un valor válido o ha introducido un valor repetido.")
         lista_numeros.append(num)
 
     mayor = max(lista_numeros)
@@ -101,7 +107,7 @@ def main():
     while True:
 
         system('cls')
-        opcion = input("Elige una opción:\n1 - Programa normal\n2 - Reto 1\n3 - Reto 2\n>")
+        opcion = input("Elige una opción:\n1 - Programa normal\n2 - Reto 1\n3 - Reto 2\n4 - Reto 3\n>")
 
         if opcion == "1":
             print("Ha elegido Programa normal")
