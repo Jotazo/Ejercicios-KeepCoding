@@ -3,11 +3,13 @@ from os import system
 
 def inicial():
     """
-    De número a mes
+    --- De número a mes ---
+
     Hacer un programa que traduzca los números del 1 al 12 a los meses del año. Hacerlo con if - elif.
 
-    Restricciones
-    Dejar una única instrucción de salida
+    Restricciones:
+
+    1.Dejar una única instrucción de salida
     """
 
     mes = ""
