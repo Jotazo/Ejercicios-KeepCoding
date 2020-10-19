@@ -1,5 +1,6 @@
 from time import sleep
 from os import system
+from modulosRetos.moduloEj12 import CalculateSimpleInteres
 
 def inicial():
     """
@@ -32,8 +33,8 @@ def inicial():
     t = float(strAnnos)
 
     A = P * (1 + r * t)
-
-    print(f"Tras {int(t)} de inversión al {r*100:.2f}%, su cantidad debe ser {A:.2f}")
+    # A = CalculateSimpleInteres(P, r, t) RETO M01 - EJ 13
+    print(f"Tras {int(t)} de inversión al {r*100:.2f}%, su cantidad debe ser {A:.2f}€")
 
 def reto1():
     # 1.Valida que las entradas sean numéricas y que el usuario no pueda continuar si no introduce un número

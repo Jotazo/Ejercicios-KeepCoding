@@ -1,3 +1,6 @@
+from time import sleep
+from os import system
+
 def inicial():
     """
     --- Calculando el interés compuesto ---
@@ -47,7 +50,6 @@ def inicial():
     A = P * (1 + r / n)**(n*t)
 
     print(f"{P:.2f} € invertidos al {r*100}% durante {t} años con {n} periodos de imposición por año se transforman en {A:.2f} €")
-
 def reto1():
     # 1.Impedir que el usuario siga con el proceso si no introduce valores numéricos correctos
     while True:
@@ -111,5 +113,33 @@ def reto2():
     P = A / (1 + r / n)**(n*t)
 
     print(f"Para conseguir {A:.2f} € en {t} años a un interés de {r*100}% con una acumulación de {n} por año se debe invertir {P:.2f} ")
+def main():
+    while True:
 
-reto2()
+        system('cls')
+        opcion = input("Elige una opción:\n1 - Programa normal\n2 - Reto 1\n3 - Reto 2\n>")
+
+        if opcion == "1":
+            print("Ha elegido Programa normal")
+            sleep(1.0)
+            system('cls')
+            inicial()
+            break
+        elif opcion == "2":
+            print("Ha elegido Reto 1")
+            sleep(1.0)
+            system('cls')
+            reto1()
+            break
+        elif opcion == "3":
+            print("Ha elegido Reto 2")
+            sleep(1.0)
+            system('cls')
+            reto2()
+            break
+        else:
+            print("No ha escogido opción correcta")
+            sleep(1.0)
+            system('cls')
+
+main()

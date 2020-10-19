@@ -1,3 +1,6 @@
+from time import sleep
+from os import system
+
 def inicial():
     """
     Conversor de temperatura
@@ -86,4 +89,33 @@ def reto2():
         mensaje = f"{temperatura:.2f}ºC = {kelvin:.2f}K"
     print(mensaje)
 
-reto2()
+def main():
+    while True:
+
+        system('cls')
+        opcion = input("Elige una opción:\n1 - Programa normal\n2 - Reto 1\n3 - Reto 2\n>")
+
+        if opcion == "1":
+            print("Ha elegido Programa normal")
+            sleep(1.0)
+            system('cls')
+            inicial()
+            break
+        elif opcion == "2":
+            print("Ha elegido Reto 1")
+            sleep(1.0)
+            system('cls')
+            reto1()
+            break
+        elif opcion == "3":
+            print("Ha elegido Reto 2")
+            sleep(1.0)
+            system('cls')
+            reto2()
+            break
+        else:
+            print("No ha escogido opción correcta")
+            sleep(1.0)
+            system('cls')
+
+main()
