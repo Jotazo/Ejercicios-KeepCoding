@@ -14,11 +14,13 @@ que lo haga directamente si no se ejecuta desde otro programa (lo hace como main
 """
 
 def codigo_ascii():
+    contador = 1
     for i in range(32, 128):
-        if i == 56 or i == 81 or i == 106:
-            print(f"{chr(i):>1}\n")
+        if contador % 4 == 0:
+            print(f"{chr(i):>10}\n")
         else:
-            print(f"{chr(i):>1}", end= " ")
-
+            print(f"{chr(i):>10}", end = " ")
+        contador += 1
+        
 if __name__ == "__main__":
     codigo_ascii()
