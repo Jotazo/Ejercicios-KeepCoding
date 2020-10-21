@@ -31,8 +31,7 @@ for usuario in usuarios:
 
             print("Ok, las contraseñas coinciden")
             encontrado = True
-            break
-
+            
 if not encontrado:
     print("Usuario y/o contraseña incorrecto")
 
