@@ -19,7 +19,7 @@ strPwd = input("Password: ")
 bytePwd = strPwd.encode() # Contraseña en bytes, encriptada
 pwd_hashed = bcrypt.hashpw(bytePwd, sal) # Contraseña con sal(encriptada)
 
-no_encontrado = False
+encontrado = False
 
 for usuario in usuarios:
     if strUser == usuario:
@@ -30,9 +30,9 @@ for usuario in usuarios:
         if bcrypt.checkpw(bytePwd, pwd1_hashed):
 
             print("Ok, las contraseñas coinciden")
-            no_encontrado = True
+            encontrado = True
             break
 
-if not no_encontrado:
+if not encontrado:
     print("Usuario y/o contraseña incorrecto")
 
