@@ -51,9 +51,9 @@ def reto2():
     sleep(2.0)
 
     numCaracteres = 0
-    for i,j in enumerate(cadena):
-        numCaracteres = i
-    numCaracteres += 1
+    for i in cadena:
+        numCaracteres += 1
+    
 
     system('cls')
 
