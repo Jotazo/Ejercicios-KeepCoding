@@ -10,20 +10,29 @@ Restricciones:
 3.Mantener separadas la entrada, salida y proceso dentro del programa.
 4.Si el valor introducido no es numérico volver a pedirlo
 """
+lista_v = []
 
-valor_total = 0
-contador = 0
-while True:
-        
+x = True
+
+while x:
+
     try:
-        numero = int(input("Introduzca un valor númerico. Si introduce el 0, se dará por finalizado. "))
-        if numero == 0 and valor_total == 0:
-            raise ValueError
-        elif numero == 0:
-            break
-        valor_total += numero
-        contador += 1
+        n = int(input("Introduzca un valor numérico: "))
+        if len(lista_v) == 0 and n == 0:
+            raise TypeError
+        else:
+            if n < 0:
+                raise ValueError
+            elif n != 0:
+                lista_v.append(n)
+            else: # Quiere decir que n == 0
+                x = False
     except ValueError:
-        print("No ha introducido un valor númerico o ha introducido como primer numero el 0.")
+        print("Ha introducido un valor incorrecto")
 
-print(f"La media de los números introducidos es: {valor_total/contador}")
+    except TypeError:
+        print("Ha introducido el 0 como primera opción")
+        
+
+media = sum(lista_v) / len(lista_v)
+print(media)
